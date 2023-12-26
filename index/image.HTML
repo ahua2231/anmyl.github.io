@@ -1,0 +1,153 @@
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/image.css">
+        <script src="../js/js/javascript.js"></script>
+        <title>截图步骤</title>
+    </head>
+    <body>
+        <table id="no-border">
+            <tr>
+                <th id="no-border">
+                    <img src="../images/MIPAY/2.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/3.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/1.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/4.png" alt="图片" class="img preview">
+                </th>
+            </tr>
+            <tr>
+                <td id="allblue">【MIPAY】解绑银行卡</td>
+                <td id="allblue">【MIPAY】手机快捷登录+找回支付密码</td>
+                <td id="allblue">【MIPAY】卖币步骤</td>
+                <td id="allblue">【MIPAY】买币步骤</td>
+            </tr>
+            <tr>
+                <th id="no-border">
+                    <img src="../images/MIPAY/5.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/6.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/7.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/8.png" alt="图片" class="img preview">
+                </th>
+            </tr>
+            <tr>
+                <td id="allblue">【VPAY】买币步骤</td>
+                <td id="allblue">【VPAY】实名认证</td>
+                <td id="allblue">苹果手机录屏步骤</td>
+                <td id="allblue">【MIPAY】手机快捷登录+找回登录密码</td>
+            </tr>
+            <tr>
+                <th id="no-border">
+                    <img src="../images/MIPAY/9.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/10.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/11.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/12.png" alt="图片" class="img preview">
+                </th>
+            </tr>
+            <tr>
+                <td id="allblue">【MIPAY】绑定收付款方式</td>
+                <td id="allblue">【MIPAY】解绑银行卡</td>
+                <td id="allblue">【VPAY】绑定收付款方式</td>
+                <td id="allblue">【VPAY】手机快捷登录+找回登录密码</td>
+            </tr>
+            <tr>
+                <th id="no-border">
+                    <img src="../images/MIPAY/13.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/14.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/15.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/16.png" alt="图片" class="img preview">
+                </th>
+            </tr>
+            <tr>
+                <td id="allblue">【VPAY】卖币步骤</td>
+                <td id="allblue">OPPO手机录屏步骤</td>
+                <td id="allblue">VIVO手机录屏步骤</td>
+                <td id="allblue">华为手机录屏步骤</td>
+            </tr>
+            <tr>
+                <th id="no-border">
+                    <img src="../images/MIPAY/17.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/18.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/.png" alt="图片" class="img preview">
+                </th>
+                <th id="no-border">
+                    <img src="../images/MIPAY/.png" alt="图片" class="img preview">
+                </th>
+            </tr>
+            <tr>
+                <td id="allblue">开发者模式</td>
+                <td id="allblue">未受信任的企业级开发者</td>
+                <td id="allblue"></td>
+                <td id="allblue"></td>
+            </tr>
+        </table>
+        <script>
+            // 获取所有 .preview 元素
+            for (let img of document.querySelectorAll(".preview")) {
+                img.addEventListener("click", ()=>{
+                    //创建预览器
+                    let container = document.createElement("div");
+                    container.classList.add("preview-container");
+                    container.onclick = function() {
+                        container.remove();
+                    }
+
+                    //创建预览图片
+                    let innerImg = document.createElement("img");
+                    innerImg.src = img.src;
+                    innerImg.classList.add("inage");
+
+                    //绑定滚动事件
+                    container.onwheel = function(event) {
+                        const width = getComputedStyle(innerImg).width.slice(0, -2);
+                        const height = getComputedStyle(innerImg).height.slice(0, -2);
+
+                        if (event.deltaY > 0) {
+                            //向上滚动放大
+                            innerImg.style.width = parseInt(width) * 1.1 + "px";
+                            innerImg.style.height = parseInt(height) * 1.1 + "px";
+                        } else if (event.deltaY < 0) {
+                            //向下滚动缩小
+                            innerImg.style.width = parseInt(width) * 0.9 + "px";
+                            innerImg.style.height = parseInt(height) * 0.9 + "px";
+                        }
+                    }
+
+                    //将图片添加到预览器
+                    container.append(innerImg);
+
+                    //将预览器添加到 body 中
+                    document.body.append(container);
+                }
+                )
+            }
+        </script>
+    </body>
+</html>
