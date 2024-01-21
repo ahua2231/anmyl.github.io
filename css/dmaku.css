@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@charset "utf-8"; /* ä»¥ä¸‹å®žé™…ä½¿ç”¨è‹¥å·²åˆå§‹åŒ–å¯åˆ é™¤ .nav heightçˆ¶çº§éœ€é€çº§è®¾ç½®ä¸º100%*/
+body,html {
+    height: 100%;
+    background: white;
+}
+
+body,ul {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 14px "å¾®è½¯é›…é»‘","å®‹ä½“","Arial Narrow",HELVETICA;
+    -webkit-text-size-adjust: 100%;
+    background-color: #f8f8f8;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ä»¥ä¸Šå®žé™…ä½¿ç”¨è‹¥å·²åˆå§‹åŒ–å¯åˆ é™¤ */
+/* nav */
+.nav {
+    width: 220px;
+    height: 100%;
+    background: #263238;
+    transition: all .3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nav a {
+    display: block;
+    overflow: hidden;
+    padding-left: 20px;
+    line-height: 46px;
+    max-height: 46px;
+    color: #ABB1B7;
+    transition: all .3s;
+}
+
+.nav a span {
+    margin-left: 30px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item.nav-show {
+    border-bottom: none;
+}
+
+.nav-item ul {
+    display: none;
+    background: rgba(0,0,0,.1);
+}
+
+.nav-item.nav-show ul {
+    display: block;
+}
+
+.nav-item>a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 2px;
+    height: 46px;
+    background: #34A0CE;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.nav .nav-icon {
+    font-size: 20px;
+    position: absolute;
+    margin-left: -1px;
+}
+
+/* æ­¤å¤„ä¿®æ”¹å¯¼èˆªå›¾æ ‡ å¯è‡ªå®šä¹‰iconfont æ›¿æ¢*/
+.icon_1::after {
+    content: "\e62b";
+}
+
+.icon_2::after {
+    content: "\e669";
+}
+
+.icon_3::after {
+    content: "\e61d";
+}
+
+/*---------------------*/
+.nav-more {
+    float: right;
+    margin-right: 20px;
+    font-size: 12px;
+    transition: transform .3s;
+}
+
+/* æ­¤å¤„ä¸ºå¯¼èˆªå³ä¾§ç®­å¤´ å¦‚æžœè‡ªå®šä¹‰iconfont ä¹Ÿéœ€è¦æ›¿æ¢*/
+.nav-more::after {
+    content: "\e621";
+}
+
+/*---------------------*/
+.nav-show .nav-more {
+    transform: rotate(90deg);
+}
+
+.nav-show,.nav-item>a:hover {
+    color: #FFF;
+    background: rgba(0,0,0,.1);
+}
+
+.nav-show>a:before,.nav-item>a:hover:before {
+    opacity: 1;
+}
+
+.nav-item li:hover a {
+    color: #FFF;
+    background: rgba(0, 0, 0,.1);
+}
+
+/* nav-mini */
+.nav-mini.nav {
+    width: 60px;
+}
+
+.nav-mini.nav .nav-icon {
+    /* margin-left:-2px; */
+}
+
+.nav-mini.nav .nav-item>a span {
+    display: none;
+}
+
+.nav-mini.nav .nav-more {
+    margin-right: -20px;
+}
+
+.nav-mini.nav .nav-item ul {
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    width: 180px;
+    z-index: 99;
+    background: #3C474C;
+    overflow: hidden;
+}
+
+.nav-mini.nav .nav-item:hover {
+    background: rgba(255,255,255,.1);
+}
+
+.nav-mini.nav .nav-item:hover .nav-item a {
+    color: #FFF;
+}
+
+.nav-mini.nav .nav-item:hover a:before {
+    opacity: 1;
+}
+
+.nav-mini.nav .nav-item:hover ul {
+    display: block;
+}
+
+/* Add this style for the expanded state */
+#content {
+    margin-left: 220px;
+    /* Adjust this value based on your navigation bar width */
+    transition: margin-left 0.3s;
+}
+
+/* Add this style for the contracted state */
+.nav-mini.nav #content {
+    margin-left: 60px;
+    /* Adjust this value based on your mini navigation bar width */
+}
+
+iframe {
+    width: 99.4%;
+    margin: 0px;
+    height: 98.5vh;
+    border: none;
+}
