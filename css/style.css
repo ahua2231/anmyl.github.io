@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+}
+
+.container {
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 12px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+u:hover {
+    text-decoration: none;
+    background-color: #dddddd;
+}
+
+u {
+    text-decoration: none;
+    font-size: 18px;
+    color: #3498db;
+    /* Add a color for the links */
+}
+
+#left {
+    margin-left: 350px;
+}
+
+.text {
+    font-size: 30px;
+    color: red;
+}
+
+.red {
+    color: red;
+}
+
+.bull {
+    color: blue;
+    font-size: 20px;
+}
