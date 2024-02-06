@@ -61,7 +61,8 @@ const sampleData = [{
     <img class='thum-img' src="../images/16.png" class="img" onclick='showBgImg(this)'>
     <img class='thum-img' src="../images/17.png" class="img" onclick='showBgImg(this)'>
     <img class='thum-img' src="../images/18.png" class="img" onclick='showBgImg(this)'>
-    <img class='thum-img' src="../images/云闪付.png" class="img" onclick='showBgImg(this)'>`
+    <img class='thum-img' src="../images/云闪付.png" class="img" onclick='showBgImg(this)'>
+    <img class='thum-img' src="../images/微信.png" class="img" onclick='showBgImg(this)'>`
 }];
 
 // Call the function with the sample data
